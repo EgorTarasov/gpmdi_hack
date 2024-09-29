@@ -35,4 +35,4 @@ COPY . /project/
 # RUN cd /project
 
 
-CMD ["streamlit", "run", "/project/hack/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "/project/hack/Разметка_видео.py", "--server.port=8501", "--server.address=0.0.0.0"]

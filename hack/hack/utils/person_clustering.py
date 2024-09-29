@@ -103,7 +103,7 @@ def scaler(emb: pd.Series):
 
 def optics_clustering(
     embeddings: np.ndarray,
-    min_samples: int = 20,
+    min_samples: int = 8,
     xi: float = 0.01,
     min_cluster_size: float = 0.01,
 ):
@@ -212,7 +212,7 @@ def save_main_photo(path: str, closest_objects: dict, cropped_frames_dict: dict)
                 index in cropped_frames_dict["frame_numbers"]
             ):  # Убедимся, что индекс существует
                 image = cropped_frames_dict["frames"][index]  # Получаем изображение
-                if image.shape[0] > 300 and image.shape[1] > 270:
+                if image.shape[0] > 250 and image.shape[1] > 220:
                     # Формируем имя файла
                     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                     base_filename = f"cluster_{label}_object_{index}.jpg"
